@@ -269,6 +269,40 @@ main,
     .hero h2 { font-size: 1.4rem; }
 }
 
+/* Further small-screen improvements */
+@media (max-width: 600px) {
+    .site-header {
+        box-shadow: none;
+    }
+    .header-content {
+        padding: 0.8rem 0;
+        gap: 0.5rem;
+    }
+    .header-content > div { width: 100%; }
+    .theme-button { align-self: center; }
+    .hero-text { text-align: center; }
+    .hero-text h2 { font-size: 1.6rem; }
+    .hero p { margin-inline: auto; }
+    .container { width: calc(100% - 1.5rem); }
+    .button { padding: 0.9rem 1rem; }
+    .card-grid { grid-template-columns: 1fr; }
+    .product-card .thumb { height: 180px; }
+    .modal-content {
+        width: calc(100% - 2rem);
+        height: auto;
+        padding: 1rem;
+        border-radius: 0.8rem;
+    }
+    .modal-image { height: 160px; }
+    .horse-bg { display: none; }
+}
+
+/* Ensure images never overflow and scale nicely */
+img { max-width: 100%; height: auto; display: block; }
+
+/* larger touch targets */
+.button, .theme-button { touch-action: manipulation; }
+
 body.dark {
     background: #121212;
     color: #f4f4f4;
