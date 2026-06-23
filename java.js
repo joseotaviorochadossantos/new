@@ -31,7 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function openModal(productKey) {
         const product = productDetails[productKey];
-        if (!product || !modal) return;
+        if (!product) return;
+        if (!modal) {
+            // fallback: se o modal não existe (por algum motivo), mostrar alerta com detalhes
+            alert(`${product.title}\n\n${product.text}\n\nPreço: ${product.price}`);
+            return;
+        }
 
         if (modalImage) {
             modalImage.style.display = '';
@@ -65,14 +70,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (modal) modal.classList.add('hidden');
     }
 
-    const detailButtons = document.querySelectorAll('.details-button');
-    if (detailButtons) {
-        detailButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                openModal(button.dataset.product);
-            });
-        });
-    }
+    // Prefer event delegation to ensure dynamically-added buttons also work
+    document.body.addEventListener('click', (e) => {
+        const btn = e.target.closest('.details-button');
+        if (!btn) return;
+        const key = btn.dataset.product;
+        console.log('[DEBUG] details-button clicked:', key);
+        openModal(key);
+    });
 
     if (closeModal) closeModal.addEventListener('click', closeModalWindow);
     if (modal) modal.addEventListener('click', event => {
