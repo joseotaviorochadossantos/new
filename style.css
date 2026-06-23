@@ -91,6 +91,9 @@ main,
     border-radius: 0.6rem;
     font-weight: 700;
     font-size: 0.98rem;
+    max-width: 160px;
+    display: inline-block;
+    text-align: center;
 }
 
 .hero {
