@@ -25,7 +25,7 @@
                 <a href="#produtos" class="button">Ver panelas</a>
             </div>
             <div class="hero-image">
-                <img src="img/Panela2.jpg.webp" alt="Panelas na cozinha">
+                <img src="img/Panela1.jpg.webp" alt="Panelas na cozinha">
             </div>
         </section>
 
@@ -33,19 +33,31 @@
             <h3>Tipos de panelas</h3>
             <div class="card-grid">
                 <article class="product-card">
+                    <div class="thumb"><img src="img/inox.jpg" alt="Aço inox"></div>
                     <h4>Panela de aço inox</h4>
                     <p>Durável, elegante e ideal para cozinhar uniformemente.</p>
-                    <button class="details-button" data-product="inox">Saiba mais</button>
+                    <div class="card-foot">
+                        <span class="price">R$ 259,90</span>
+                        <button class="details-button" data-product="inox">Saiba mais</button>
+                    </div>
                 </article>
                 <article class="product-card">
+                    <div class="thumb"><img src="img/panela3.webp" alt="Antiaderente"></div>
                     <h4>Panela antiaderente</h4>
                     <p>Perfeita para frituras leves e limpeza rápida.</p>
-                    <button class="details-button" data-product="antiaderente">Saiba mais</button>
+                    <div class="card-foot">
+                        <span class="price">R$ 179,90</span>
+                        <button class="details-button" data-product="antiaderente">Saiba mais</button>
+                    </div>
                 </article>
                 <article class="product-card">
+                    <div class="thumb"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=70" alt="Cerâmica"></div>
                     <h4>Caçarola de cerâmica</h4>
                     <p>Distribui calor bem e deixa seus pratos com acabamento gourmet.</p>
-                    <button class="details-button" data-product="ceramica">Saiba mais</button>
+                    <div class="card-foot">
+                        <span class="price">R$ 329,90</span>
+                        <button class="details-button" data-product="ceramica">Saiba mais</button>
+                    </div>
                 </article>
             </div>
         </section>
@@ -61,20 +73,48 @@
                 <li>Design funcional e moderno</li>
             </ul>
         </section>
+
+        <section class="container palette-section">
+            <h3>Paleta de cores</h3>
+            <div class="palette">
+                <div class="swatch" style="--c:#b85c29;"><span>Terracota</span></div>
+                <div class="swatch" style="--c:#e07a40;"><span>Âmbar</span></div>
+                <div class="swatch" style="--c:#264653;"><span>Verde Profundo</span></div>
+            </div>
+        </section>
+
+        <section class="container contact-section" id="contato">
+            <h3>Fale conosco</h3>
+            <form id="contactForm" class="contact-form">
+                <div class="form-row">
+                    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                    <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                </div>
+                <textarea id="message" name="message" rows="5" placeholder="Como podemos ajudar?" required></textarea>
+                <div class="form-row">
+                    <button type="submit" class="button">Enviar mensagem</button>
+                    <button type="reset" class="button secondary">Limpar</button>
+                </div>
+            </form>
+        </section>
     </main>
 
     <div id="modal" class="modal hidden">
         <div class="modal-content">
             <button id="closeModal" class="close-button">×</button>
+            <img id="modalImage" src="" alt="" class="modal-image">
             <h4 id="modalTitle"></h4>
             <p id="modalText"></p>
+            <p class="modal-price"><strong>Preço:</strong> <span id="modalPrice"></span></p>
+            <div class="modal-actions">
+                <a id="buyButton" class="button">Comprar / Pedir info</a>
+            </div>
         </div>
     </div>
 
     <footer class="site-footer">
         <div class="container">
-            <p>© 2026 Panelas Premium. Inspiração para cozinhar todos os dias. 
-                Feito por Zé. </p>
+            <p>© 2026 Panelas Premium. Inspiração para cozinhar todos os dias. Feito por Zé.</p>
         </div>
     </footer>
 

@@ -241,3 +241,93 @@ body.dark .site-footer,
 body.dark .close-button {
     color: #d1d1d1;
 }
+
+/* Product card images and prices */
+.product-card .thumb {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 0.85rem;
+    margin-bottom: 0.85rem;
+}
+.product-card .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.card-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+.price {
+    background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+    padding: 0.4rem 0.7rem;
+    border-radius: 999px;
+    font-weight: 700;
+    color: var(--primary);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* Palette */
+.palette {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0 2rem;
+}
+.swatch {
+    width: 120px;
+    height: 80px;
+    border-radius: 0.75rem;
+    background: var(--c);
+    display:flex;
+    align-items:flex-end;
+    padding:8px;
+    color: #fff;
+    font-weight:600;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+/* Contact form */
+.contact-form {
+    display: grid;
+    gap: 0.75rem;
+    background: var(--surface);
+    padding: 1.25rem;
+    border-radius: 0.9rem;
+    box-shadow: 0 10px 30px var(--shadow);
+}
+.contact-form .form-row {
+    display: flex;
+    gap: 0.75rem;
+}
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid #e6e6e6;
+    padding: 0.75rem;
+    border-radius: 0.6rem;
+    font-size: 0.95rem;
+    flex: 1;
+}
+.contact-form .secondary {
+    background: transparent;
+    border: 1px solid #ccc;
+    color: var(--secondary);
+}
+
+.modal-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0.6rem;
+    margin-bottom: 1rem;
+}
+.modal-actions { margin-top: 1rem; }
+.modal-price { margin-top: 0.6rem; color: var(--secondary); }
+
+@media (max-width: 840px) {
+    .product-card .thumb { height: 200px; }
+}
