@@ -3,9 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OIIIIIIIIIIIiii</title>
+    <title>Panelas Premium</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="site-header">
+        <div class="container header-content">
+            <div>
+                <h1>Panelas Premium</h1>
+                <p>Descubra panelas resistentes, fáceis de limpar e perfeitas para sua cozinha.</p>
+            </div>
+            <button id="themeToggle" class="theme-button">Modo Escuro</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <div class="hero-text">
+                <h2>Seu cardápio começa com a panela certa.</h2>
+                <p>Da feijoada ao risoto, encontre panelas ideais para cada receita e cada estilo de cozinha.</p>
+                <a href="#produtos" class="button">Ver panelas</a>
+            </div>
+            <div class="hero-image">
+                <img src="img/Panela2.jpg.webp" alt="Panelas na cozinha">
+            </div>
+        </section>
+
+        <section id="produtos" class="container cards-section">
+            <h3>Tipos de panelas</h3>
+            <div class="card-grid">
+                <article class="product-card">
+                    <h4>Panela de aço inox</h4>
+                    <p>Durável, elegante e ideal para cozinhar uniformemente.</p>
+                    <button class="details-button" data-product="inox">Saiba mais</button>
+                </article>
+                <article class="product-card">
+                    <h4>Panela antiaderente</h4>
+                    <p>Perfeita para frituras leves e limpeza rápida.</p>
+                    <button class="details-button" data-product="antiaderente">Saiba mais</button>
+                </article>
+                <article class="product-card">
+                    <h4>Caçarola de cerâmica</h4>
+                    <p>Distribui calor bem e deixa seus pratos com acabamento gourmet.</p>
+                    <button class="details-button" data-product="ceramica">Saiba mais</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="container about-section">
+            <div>
+                <h3>Por que escolher boas panelas?</h3>
+                <p>Uma panela de qualidade transforma a experiência na cozinha, mantém o sabor dos alimentos e facilita o preparo de receitas saudáveis e saborosas.</p>
+            </div>
+            <ul>
+                <li>Mais durabilidade</li>
+                <li>Distribuição de calor eficiente</li>
+                <li>Design funcional e moderno</li>
+            </ul>
+        </section>
+    </main>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <button id="closeModal" class="close-button">×</button>
+            <h4 id="modalTitle"></h4>
+            <p id="modalText"></p>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 Panelas Premium. Inspiração para cozinhar todos os dias. 
+                Feito por Zé </p>
+        </div>
+    </footer>
+
+    <script src="java.js"></script>
 </body>
 </html>
